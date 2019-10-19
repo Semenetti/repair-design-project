@@ -16,7 +16,9 @@ body {
     height: 840px;
     width: 1440px;    
     background: #131313;
-   
+    a {
+        text-decoration: none;
+    }
 
     .scroll-down-btn {        
         box-sizing: border-box;
@@ -24,9 +26,7 @@ body {
         top: -35px;
         margin-left: 0%;
         z-index: 11;
-        a {
-            text-decoration: none;
-        }
+       
         .scroll-down {
             display: flex;
             flex-direction: row;
@@ -103,7 +103,7 @@ body {
         font-weight: bold;
         flex-grow: 1;       
         text-align: center;
-        
+     
         }
     &-block__button {        
         flex-grow: 2;               
@@ -118,6 +118,10 @@ body {
             border: none;
             border-radius: 2px;
             background-color: #E3B873;       
+        }
+        .nav-btn:hover {
+            background-color: rgb(224, 208, 183);    
+            cursor: pointer;
         }
         
     }
@@ -281,7 +285,7 @@ body {
         h2 {
             font-family: Yeseva One;
             font-style: normal;
-            font-weight: normal;
+            font-weight: bold;
             font-size: 27px;
             line-height: 37px;
             letter-spacing: -0.07em;
@@ -420,7 +424,7 @@ body {
             padding: 50px 0 10px;
             font-family: Yeseva One;
             font-style: normal;
-            font-weight: normal;
+            font-weight: bold;
             font-size: 20px;
             line-height: 28px;
             text-align: center;
@@ -474,8 +478,10 @@ body {
         font-size: 15px;
         line-height: 40px;
         text-align: center;
-        
-
+    }
+    .submit-btn:hover {
+        cursor: pointer;        
+        background-color: rgb(221, 198, 162);
     }
 }
 
@@ -579,7 +585,7 @@ input[type="checkbox"]:checked {
         padding-top: 30px;
         font-family: Yeseva One;
         font-style: normal;
-        font-weight: normal;
+        font-weight: bold;
         font-size: 20px;
         line-height: 28px;
         text-align: center;
@@ -635,6 +641,10 @@ input[type="checkbox"]:checked {
             line-height: 50px;
             text-transform: uppercase;
            }
+           .price-btn:hover {
+               cursor: pointer;
+               background-color: rgb(219, 193, 150); 
+           }
         }
         &__box {
             img {           
@@ -685,16 +695,17 @@ input[type="checkbox"]:checked {
             .one, .two, .three, .four {                    
                     position: relative;                                       
                     display: inline-block;
-                    height: 40px;                    
-                    width: 40px;
+                    height: 70px;                    
+                    width: 70px;
                     top: 50%;
                     transform: translateY(-50%);
                     border-radius: 50%;                    
                     background: #E3B873;
+                    border: 15px solid #fff;
                     z-index: 3;
                     text-align: center;
                     vertical-align: top;
-                    line-height: 40px;
+                    line-height: 45px;
                     font-family: Yeseva One;
                     font-style: normal;
                     font-weight: normal;
@@ -719,17 +730,17 @@ input[type="checkbox"]:checked {
                 
             }
             .one-content {
-                width: 57%;
+                max-width: 55%;
 
             }
             .two-content {
-                width: 40%;
+                width: 39%;
             }
             .three-content {
-                width: 37%;
+                width: 36%;
             }
             .four-content {
-                width: 45%;
+                width: 43%;
             }
          
         }
@@ -800,11 +811,596 @@ input[type="checkbox"]:checked {
             .check-box {
                 display: block;
             }
+            .content {
+                text-align: center;
+                padding-top: 15px;
+                p { 
+                    display: inline-block;
+                    text-align: left;
+                    font-family: FuturaDemiC;
+                    font-size: 20px;                    
+                    color: #E3B873;
+                    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+                  }
+            }
         }
     }
 }
+.fantasies {
+    height: 1020px;       
+    &-background {
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    top: 10%;
+    height: 80%;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('./assets/img/bg-fantasies.png') center no-repeat;
+    background-size: cover;    
+    
+}
+    .left-side {    
+    align-self: center;    
+    flex-basis: 40%;    
+    h2 {
+        padding: 0 90px 50px;
+        text-align: left;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: #E3B873;
+    }
+    ul {
+        padding: 0 90px;
+        font-family: Proxima Nova;
+        font-size: 20px;
+        line-height: 34px;
+        color: #FFFFFF;
+    }
+    li {
+        a {
+            text-decoration: none;
+        }
+    }
+    .selected {
+    color: #E3B873;
+    text-decoration: underline;
+    }
+    }
+    .right-side {
+        flex-basis: 60%;            
+        .content {                       
+            display: flex;                      
+            justify-content: space-around;  
+            text-align: center;                   
+        img {
+            width: 90%;            
+            padding: 25px 0px;
+        }
+        &-left {      
+            &-slider {                 
+                top: -50px;
+                position: relative;                          
+            }
+        }
+        &-right {   
+            top: -100px;
+            position: relative;
+       
+         }         
+        }   
+}
+&__slider-btn-next {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    right: 5%;
+    background-size: cover;
+    border: none;
+    background-color: #E3B873;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    img {       
+        width: 50%;
+        height: 50%;
+    }
+}
+&__slider-btn-prev {    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    left: 5%;
+    z-index: 1;
+    background-size: cover;
+    border: none;
+    background-color: #E3B873;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;    
+    img {
+        width: 50%;
+        height: 50%;
+    }
+}
+}
+.mobile-view {
+ display: none;
+   }
 
 
+   .design-project {
+    text-align: center;
+    background: #181818;   
+    height: 1100px;
+   
+     &__text {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 135.84%;
+        margin: 0 auto;
+        padding: 20px 0;
+        color: #000000;
+        width: 50%;
+     }
+    .header {
+        height: 500px;        
+        background: #ffffff;
+        position: relative;
+        height: 100%;
+    }
+    .pictures {
+        padding-bottom: 50px;
+    }
+    h2 {
+        padding-top: 30px;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #181818;
+
+    }
+
+    &-content{        
+        display: flex;       
+        justify-content: space-around;
+        &__box {            
+            text-align: left;
+        }
+        .box {
+            width: 86%;
+            position: relative;
+            top: -128px;
+            margin: 0 auto;            
+            background: #fff;
+            h3 {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                color: #363636;
+                padding-top: 15px;
+            }        
+            .text {
+               padding: 0 0 25px 25px;
+               font-family: FuturaBookC;
+               font-size: 15px;
+               line-height: 25px;
+
+               color: #959595;
+               
+           }
+           .price-btn {
+            position: relative;
+            top: 25px;
+            height: 50px;                  
+            color: white;
+            padding: 0 20px;
+            border: none;
+            border-radius: 2px;
+            background-color: #E3B873; 
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 50px;
+            text-transform: uppercase;
+           }
+           .price-btn:hover {
+               cursor: pointer;
+               background-color: rgb(219, 193, 150); 
+           }
+        }
+        &__box {
+            img {           
+            width: 100%;}
+        }
+    }
+    
+   }
+
+   .how-we-working {
+       display: none;
+   }
+
+.our-team {
+    text-align: center;
+    height: 1100px;
+    
+    .header {
+        background: #181818;
+        position: relative;
+        height: 500px;
+                  
+    }
+     h2 {          
+        font-family: FuturaBookC;
+        font-size: 25px;        
+        margin: 0 auto;       
+        color: #ffffff;        
+        text-align: center;
+        text-transform: uppercase;
+        padding: 50px 0 20px;
+     } 
+     p {
+        font-family: FuturaBookC;
+        font-size: 16px;
+        line-height: 27px;
+        text-align: center;        
+        color: #FFFFFF;
+        padding: 20px 0 50px;
+     }
+     &-content{        
+        display: flex;       
+        justify-content: space-around;       
+       
+        &__box {
+            position: relative;   
+            text-align: center;                      
+            margin-top: 50px; 
+            
+            img {
+                min-height: 390px;
+            }
+           .pro,.pro1,.pro2 {               
+               position: absolute;
+               width: 70px;
+               height: 70px;
+               top: -35px;
+               left: -35px;        
+            }
+            .pro {
+                background: #E3B873 url('./assets/img/team1-1.svg') center no-repeat;
+           }
+           .pro1 {
+            background: #E3B873 url('./assets/img/team2-1.svg') center no-repeat;  
+           }
+           .pro2 {
+            background: #E3B873 url('./assets/img/team3-1.svg') center no-repeat;
+           }
+        }
+        .box {                        
+            width: 86%;
+            position: relative;
+            top: -50px;
+            margin: 0 auto;            
+            background: #fff;
+            
+            
+            h3 {                
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;                
+                color: #363636;
+                padding-top: 20px;
+                
+            }        
+            .text {               
+               font-family: FuturaBookC;
+               font-size: 18px;
+               line-height: 25px;
+               text-align: center;
+               color: #959595;               
+           }
+           .price-btn {
+            position: relative;
+            top: 25px;
+            width: 100%;
+            height: 50px;                  
+            color: white;
+            padding: 0 20px;
+            border: none;
+            border-radius: 2px;
+            background-color: #E3B873; 
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: Yeseva One;
+           }
+           .price-btn:hover {
+               cursor: pointer;
+               background-color: rgb(219, 193, 150); 
+           }
+        }
+      
+        
+}
+.pictures {    
+    padding: 40px 0 0;
+}
+.text-info {
+    p {
+    width: 50%;
+    margin: 0 auto;
+    font-family: FuturaBookC;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;    
+    color: #363636;
+}
+}
+}
+
+.our-clients {
+    text-align: center;
+    height: 1200px;
+    background: #f1f1f1;
+    position: relative;      
+    &__text {
+        font-family: FuturaBookC;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        color: #363636;
+        padding-top: 30px;
+
+    }
+    .bg-down {
+        position: absolute;
+        bottom: 0;
+        left: 0;    
+        z-index: 0;
+        width: 50%;
+    }
+    .header {
+        background: #f1f1f1;
+        position: relative;
+        height: 500px;    
+        z-index: 10;              
+    }
+     h2 {          
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #181818;        
+        padding: 50px 0 20px;
+       
+     }
+     &-content{        
+        display: flex;       
+        justify-content: space-around; 
+       
+               
+       
+        &__box {
+            background: #FFFFFF;
+            padding: 15px;
+            p {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 180%;
+                /* or 27px */
+                color: #959595;
+                padding: 20px 0;                
+            }
+            
+            position: relative;   
+            text-align: left;                      
+            margin-top: 50px;
+            flex-basis: calc(80%/3);
+            .name {
+                display: inline-block;
+                               
+                width: 100%;
+                text-align: left;
+                .client1 {
+                    display: inline-block;
+                    box-sizing: border-box;
+                    img {                        
+                        width: 70px;
+                        height: 70px;                                  
+                }
+                }
+                .text {    
+                    display: inline-block;                                                            
+                    box-sizing: border-box;
+                h3 {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #181818;                    
+                }
+            }
+            }
+            
+          .buttons{
+              width: 100%;
+              text-align: left;
+              box-sizing: border-box;
+              
+              .price-btn {
+                color: #ffffff;
+                text-transform: uppercase;
+                  display: inline-block;
+                  width: calc(80%/2);
+                  text-align: center;                 
+              }
+              .price-btn:hover {
+                background-color: rgb(216, 192, 153);
+                cursor: pointer;
+              }
+              .btn-left{
+                background: #E3B873 url('./assets/img/btn-left.svg') 15px center no-repeat;
+                background-size: 20%;
+                padding-left: 40px;
+                height: 60px;
+                box-sizing: border-box;
+              }
+              .btn-right{
+                background: #E3B873 url('./assets/img/btn-right.svg') 15px center no-repeat;
+                background-size: 20%;
+                padding-left: 40px;
+                height: 60px;
+                
+              }
+
+          }
+
+
+
+          
+        }
+     
+    } 
+}
+.contacts-section {    
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('./assets/img/bg-contacts.png') center no-repeat;
+    background-size: cover;
+    h2 {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;        
+        color: #E3B873;
+        padding: 350px 0 0;        
+    }
+    .img-block {
+        text-align: center;
+        padding: 20px 0 30px;
+    }
+    .map {
+        display: block;                        
+        margin: 0 auto;
+        top: 0;
+        padding-bottom: 50px;
+        width: 70%;
+    }
+    .adress {        
+        display: flex;
+        flex-direction: column;
+    }
+
+.request-form {
+    width: 40%; 
+    height: 580px;     
+    position: absolute;   
+    left: 50%;
+    transform: translate(-50%,-50%);           
+
+    
+    .center-part {           
+        
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);                  
+
+        h3 {
+            font-family: FuturaDemiC;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;                
+            color: #ffffff;
+            padding: 15px 0 25px;
+            text-transform: uppercase;
+        }
+        input[type=text] {                
+            width: 100%;
+            padding: 12px;                
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            background-color: #131313;
+            color: #ffffff;
+          }
+          ::-webkit-input-placeholder { 
+            color: #ffffff;
+          }
+          
+          input[type=submit] {
+            background-color: #E3B873;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            
+          }
+          
+          input[type=submit]:hover {
+            background-color: rgb(223, 195, 150);
+          }
+
+        
+          .container {
+            border-radius: 5px;
+            background-color: #131313;
+            padding: 30px 50px 50px 50px;            
+            
+            
+          }
+          input.btn-form {
+            width: 30%;
+            display: block;
+            margin: 0 auto;          
+            text-transform: uppercase;
+            font-family: FuturaDemiC;
+            font-size: 13px;
+            line-height: 18px;       
+
+        }
+       
+        .check-box {
+            display: block;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+    }
+}
+}
+
+footer {
+    .navigation {
+        width: 100%;        
+        margin: 0 auto;
+        padding-left: 5.7%;
+        
+    }
+}
 
 @media (max-width: 1440px) {
     .wrapper, .header, .main {
@@ -848,6 +1444,30 @@ input[type="checkbox"]:checked {
         
                  
     }
+    .fantasies {
+        .right-side {
+            display: none;
+        }
+        .left-side {                
+            width: 100%;
+        }
+        ul {
+            display: none; 
+        }
+    }
+    .mobile-view {
+
+        display: block;
+        &-slider {
+            
+           max-height: 50vh;
+        }
+        img {    
+            width: 100%;
+            
+            text-align: center;
+        }
+          }
     .main-projects-left {
         display: none;
     }
@@ -926,6 +1546,7 @@ input[type="checkbox"]:checked {
             position: relative;
             top: 25px;        
         }
+       
         .header {
         .text-info {
             margin: 0 auto;        
@@ -980,4 +1601,109 @@ input[type="checkbox"]:checked {
         }
 }
 }
+
+.fantasies {    
+    height: 100%;
+    overflow: hidden;
+    &-background {        
+    margin-top: 0;    
+    background: #ffffff;
+    box-sizing: border-box;
+    
+}
+    .left-side {
+      
+    h2 {
+        text-align: center;        
+        color: #E3B873;
+        font-size: 16px;
+        line-height: 30px;
+        padding-bottom: 10px;
+    }}
+
+}
+.design-project {
+    text-align: center;
+    height: 100%;
+    background: #181818;
+    box-sizing: border-box;
+    border: 1px solid #181818;
+    &-content{
+    flex-direction: column;    
+    background: #181818;
+    }
+    .header {
+        background: #181818;
+    }
+    h2 {
+        color: #fff;
+    }
+    &__text { 
+        color: #ffffff;
+        width: 100%;
+    }   
+    &-content{       
+        
+        .box {
+            width: 75%;            
+            margin: 0;    
+        }
+}
+}
+
+.our-team {
+    background: #181818;
+    height: 100%;
+    .header {
+        height: 100%;
+        
+    }
+    &-content{        
+        
+        flex-direction: column;
+        width: 90%;
+        align-self: end;
+    
+
+    &__box {   
+        align-self: flex-end;         
+        width: 80%;
+            img {
+               width: 100%;               
+           }
+           .box {           
+            width: 80%;
+        }
+
+}}
+.text-info {
+    display: none;
+}
+}
+.our-clients {
+   display: none;
+}
+.contacts-section { 
+    .adress {
+     flex-direction: column-reverse;
+     .map {
+         padding: 20px 0;
+         width: 100%;         
+     }
+    }
+    h2 {
+        padding-top: 20px;
+    }
+.request-form {
+    position: relative;
+    width: 100%; 
+    left: 0;
+    transform: translate(0,0);
+}}
+
+footer {
+    display: none;
+    
+}
+
 }
